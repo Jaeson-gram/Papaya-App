@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:acrylic="clr-namespace:Xe.AcrylicView;assembly=Xe.AcrylicView"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="Papaya.MainPage">
+
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Offset0.1}" StatusBarStyle="LightContent" />
+    </ContentPage.Behaviors>
+
+
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Offset="0.1" Color="{StaticResource Offset0.1}" />
+            <GradientStop Offset="1.0" Color="{StaticResource Offset1.0}" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
+    
+    <!--layout-->
+    <Grid Margin="25" RowDefinitions=".2*, .4*, .4*">
+
+        <!-- text at the top -->
+        <VerticalStackLayout Grid.Row="0" >
+            <Label Text="PAPAYA" HorizontalOptions="Center" FontFamily="Regular" FontSize="30"/>
+            <Label Margin="0, 15, 0, 15" Text="100 grams" HorizontalOptions="Center" FontFamily="Bold" FontSize="20" FontAttributes="Bold"/>
+        </VerticalStackLayout>
+
+        <!-- image if papaya -->
+        <Image Grid.RowSpan="3" VerticalOptions="Center" HorizontalOptions="Center" Source="papaya.png" />
+
+         <!--The blurred thingy (Acrylic view)--> 
+        <acrylic:AcrylicView Grid.Row="2" CornerRadius="20" VerticalOptions="Center" 
+                             EffectStyle="Custom" TintColor="{StaticResource TintColor}" TintOpacity="0.2">
+
+            <VerticalStackLayout Padding="35" VerticalOptions="Center" BindableLayout.ItemsSource="{Binding PapayaInfo}">
+
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0, 10, 0, 0" ColumnDefinitions=".6*, .4*">
+                        <Label FontFamily="Bold" FontSize="20" Text="{Binding Micronutrient}" />
+                        <Label Grid.Column="1" FontFamily="Regular" FontSize="20" HorizontalOptions="End" Text="{Binding Percentage, StringFormat='{0}%'}" />
+                    </Grid>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+        </acrylic:AcrylicView>
+
+        
+    </Grid>
+
+</ContentPage>
