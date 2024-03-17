@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Papaya.Resources.Styles.AppColors">
+
+    <Color x:Key="Offset0.1">#ffcc33</Color>
+    <Color x:Key="Offset1.0">#fcbc03</Color>
+    <Color x:Key="TintColor">#fce787</Color>
+
+
+
+</ResourceDictionary>
