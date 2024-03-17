@@ -1,5 +1,6 @@
 # Papaya-App
-Papaya Mobile app, &lt;a href="https://dribbble.com/shots/4577289-Papaya-Fruits-Around-the-World">Catrina Fagundes Coutinho's design on Dribble&lt;/a> using .NET MAUI
+Papaya Mobile app, <a href="https://dribbble.com/shots/4577289-Papaya-Fruits-Around-the-World">Catrina Fagundes Coutinho's design on Dribble&lt;/a> using .NET MAUI
 
-![screenshots](Catrina's.jpg)
-![screenshots](mine.png)
+![Catrina's](catrina_s.jpg)
+
+![Mine](mine.jpg)
